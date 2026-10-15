@@ -1,0 +1,38 @@
+{
+  "league": "NFL",
+  "games": 7030,
+  "train_games": 5803,
+  "test_games": 1227,
+  "test_starts_on": "2021-12-13",
+  "feature_names": [
+    "home_prev_win_rate",
+    "away_prev_win_rate",
+    "home_prev_margin",
+    "away_prev_margin",
+    "home_prev_games",
+    "away_prev_games",
+    "home_rest_days",
+    "away_rest_days"
+  ],
+  "metrics": {
+    "majority_baseline": {
+      "accuracy": 0.5469,
+      "brier_score": 0.4531,
+      "log_loss": 7.3037,
+      "roc_auc": 0.5
+    },
+    "logistic_regression": {
+      "accuracy": 0.599,
+      "brier_score": 0.2352,
+      "log_loss": 0.6629,
+      "roc_auc": 0.6388
+    },
+    "random_forest": {
+      "accuracy": 0.6047,
+      "brier_score": 0.2316,
+      "log_loss": 0.6543,
+      "roc_auc": 0.647
+    }
+  },
+  "note": "Holdout evaluation on historical games, not predictions of future events. No betting use intended."
+}
